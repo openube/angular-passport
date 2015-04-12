@@ -6,7 +6,8 @@ angular.module('angularPassportApp', [
   'ngSanitize',
   'ngRoute',
   'http-auth-interceptor',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'ui.scroll'
 ])
   .config(function ($routeProvider, $locationProvider) {
     $routeProvider
@@ -37,6 +38,18 @@ angular.module('angularPassportApp', [
       .when('/signup', {
         templateUrl: 'partials/signup.html',
         controller: 'SignupCtrl'
+      })
+      .when('/playnow', {
+        templateUrl: 'partials/playnow.html',
+        controller: 'PlaynowCtrl'
+      })
+      .when('/guide', {
+        templateUrl: 'partials/guide.html',
+        controller: 'GuideCtrl'
+      })
+      .when('/contactus', {
+        templateUrl: 'partials/contactus.html',
+        controller: 'ContactusCtrl'
       })
       .otherwise({
         redirectTo: '/'

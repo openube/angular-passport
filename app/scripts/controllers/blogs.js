@@ -2,7 +2,6 @@
 
 angular.module('angularPassportApp')
   .controller('BlogsCtrl', function ($scope, Blogs, $location, $routeParams, $rootScope) {
-
     $scope.create = function() {
       var blog = new Blogs({
         title: this.title,
@@ -34,8 +33,10 @@ angular.module('angularPassportApp')
     };
 
     $scope.find = function() {
+      console.log('Blogs injected',Blogs);
       Blogs.query(function(blogs) {
         $scope.blogs = blogs;
+        
       });
     };
 

@@ -5,12 +5,23 @@ angular.module('angularPassportApp')
     $scope.menu = [{
       "title": "Blogs",
       "link": "blogs"
-    }];
+    }
+    ];
 
     $scope.authMenu = [{
       "title": "Create New Blog",
       "link": "blogs/create"
-    }];
+    },{
+      "title": "Play Now",
+      "link": "playnow"
+    },{
+      "title": "Guide",
+      "link": "guide"
+    },{
+      "title": "Contact Us",
+      "link": "contactus"
+    }
+    ];
 
     $scope.logout = function() {
       Auth.logout(function(err) {

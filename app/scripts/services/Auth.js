@@ -35,6 +35,7 @@ angular.module('angularPassportApp')
 
       createUser: function(userinfo, callback) {
         var cb = callback || angular.noop;
+        console.log('userinfo',userinfo);
         User.save(userinfo,
           function(user) {
             $rootScope.currentUser = user;
