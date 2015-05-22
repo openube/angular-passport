@@ -12,7 +12,6 @@ angular.module('angularPassportApp')
         },
         function(err) {
           $scope.errors = {};
-
           if (!err) {
             $location.path('/');
           } else {
